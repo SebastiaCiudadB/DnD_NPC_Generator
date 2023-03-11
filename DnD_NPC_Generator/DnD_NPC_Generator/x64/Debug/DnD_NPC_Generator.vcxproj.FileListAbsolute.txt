@@ -1,0 +1,4 @@
+C:\Users\sebas\Documents\GitHub\DnD_NPC_Generator\DnD_NPC_Generator\DnD_NPC_Generator\x64\Debug\DnD_NPC_Generator.vcxproj.AssemblyReference.cache
+C:\Users\sebas\Documents\GitHub\DnD_NPC_Generator\DnD_NPC_Generator\DnD_NPC_Generator\x64\Debug\DnD_NPC_Generator.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\sebas\Documents\GitHub\DnD_NPC_Generator\DnD_NPC_Generator\DnD_NPC_Generator\x64\Debug\DnDNPCGenerator.MainForm.resources
+C:\Users\sebas\Documents\GitHub\DnD_NPC_Generator\DnD_NPC_Generator\DnD_NPC_Generator\x64\Debug\DnD_NPC_Generator.vcxproj.GenerateResource.cache
