@@ -110,6 +110,8 @@ namespace DnDNPCGenerator {
 			this->btn_ajustes->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btn_ajustes->Dock = System::Windows::Forms::DockStyle::Top;
 			this->btn_ajustes->FlatAppearance->BorderColor = System::Drawing::Color::Black;
+			this->btn_ajustes->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)),
+				static_cast<System::Int32>(static_cast<System::Byte>(131)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
 			this->btn_ajustes->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btn_ajustes->Location = System::Drawing::Point(0, 300);
 			this->btn_ajustes->Name = L"btn_ajustes";
@@ -118,8 +120,6 @@ namespace DnDNPCGenerator {
 			this->btn_ajustes->Text = L"Settings";
 			this->btn_ajustes->UseVisualStyleBackColor = false;
 			this->btn_ajustes->Click += gcnew System::EventHandler(this, &MainForm::btn_ajustes_Click);
-			this->btn_ajustes->MouseEnter += gcnew System::EventHandler(this, &MainForm::btn_ajustes_MouseEnter);
-			this->btn_ajustes->MouseLeave += gcnew System::EventHandler(this, &MainForm::btn_ajustes_MouseLeave);
 			// 
 			// btn_list
 			// 
@@ -128,6 +128,8 @@ namespace DnDNPCGenerator {
 			this->btn_list->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btn_list->Dock = System::Windows::Forms::DockStyle::Top;
 			this->btn_list->FlatAppearance->BorderColor = System::Drawing::Color::Black;
+			this->btn_list->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)),
+				static_cast<System::Int32>(static_cast<System::Byte>(131)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
 			this->btn_list->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btn_list->Location = System::Drawing::Point(0, 250);
 			this->btn_list->Name = L"btn_list";
@@ -136,8 +138,6 @@ namespace DnDNPCGenerator {
 			this->btn_list->Text = L"List of NPC\'s";
 			this->btn_list->UseVisualStyleBackColor = false;
 			this->btn_list->Click += gcnew System::EventHandler(this, &MainForm::btn_list_Click);
-			this->btn_list->MouseEnter += gcnew System::EventHandler(this, &MainForm::btn_list_MouseEnter);
-			this->btn_list->MouseLeave += gcnew System::EventHandler(this, &MainForm::btn_list_MouseLeave);
 			// 
 			// btn_npc
 			// 
@@ -146,6 +146,8 @@ namespace DnDNPCGenerator {
 			this->btn_npc->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btn_npc->Dock = System::Windows::Forms::DockStyle::Top;
 			this->btn_npc->FlatAppearance->BorderColor = System::Drawing::Color::Black;
+			this->btn_npc->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)),
+				static_cast<System::Int32>(static_cast<System::Byte>(131)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
 			this->btn_npc->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btn_npc->Location = System::Drawing::Point(0, 200);
 			this->btn_npc->Name = L"btn_npc";
@@ -154,8 +156,6 @@ namespace DnDNPCGenerator {
 			this->btn_npc->Text = L"Random NPC";
 			this->btn_npc->UseVisualStyleBackColor = false;
 			this->btn_npc->Click += gcnew System::EventHandler(this, &MainForm::btn_npc_Click);
-			this->btn_npc->MouseEnter += gcnew System::EventHandler(this, &MainForm::btn_npc_MouseEnter);
-			this->btn_npc->MouseLeave += gcnew System::EventHandler(this, &MainForm::btn_npc_MouseLeave);
 			// 
 			// panel_Icono
 			// 
@@ -219,31 +219,6 @@ namespace DnDNPCGenerator {
 
 		}
 #pragma endregion
-	//Con estas funciones, cambiamos el color del boton cuando pasamos por encima con el raton
-	private: System::Void btn_npc_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
-		this->btn_npc->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)), static_cast<System::Int32>(static_cast<System::Byte>(131)),
-			static_cast<System::Int32>(static_cast<System::Byte>(136)));
-	}
-	private: System::Void btn_npc_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-		this->btn_npc->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
-			static_cast<System::Int32>(static_cast<System::Byte>(79)));
-	}
-	private: System::Void btn_list_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
-		this->btn_list->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)), static_cast<System::Int32>(static_cast<System::Byte>(131)),
-			static_cast<System::Int32>(static_cast<System::Byte>(136)));
-	}
-	private: System::Void btn_list_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-		this->btn_list->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
-			static_cast<System::Int32>(static_cast<System::Byte>(79)));
-	}
-	private: System::Void btn_ajustes_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
-		this->btn_ajustes->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)), static_cast<System::Int32>(static_cast<System::Byte>(131)),
-			static_cast<System::Int32>(static_cast<System::Byte>(136)));
-	}
-	private: System::Void btn_ajustes_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-		this->btn_ajustes->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
-			static_cast<System::Int32>(static_cast<System::Byte>(79)));
-	}
 
 	//Funciones para cambiar el formulario del panel central
 	   template<class T>
@@ -260,13 +235,29 @@ namespace DnDNPCGenerator {
 
 
 	private: System::Void btn_npc_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Abrimos el formulario correspondiente
 		this->openPanel(gcnew DnDNPCGenerator::RandomNPC);
+		//Cambiamos el color de los botones
+		this->btn_npc->BackColor = System::Drawing::Color::FromArgb(14, 131, 136);
+		this->btn_list->BackColor = System::Drawing::Color::FromArgb(46, 79, 79);
+		this->btn_ajustes->BackColor = System::Drawing::Color::FromArgb(46, 79, 79);
+
 	}
 	private: System::Void btn_list_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Abrimos el formulario correspondiente
 		this->openPanel(gcnew DnDNPCGenerator::NPCList);
+		//Cambiamos el color de los botones
+		this->btn_npc->BackColor = System::Drawing::Color::FromArgb(46, 79, 79);
+		this->btn_list->BackColor = System::Drawing::Color::FromArgb(14, 131, 136);
+		this->btn_ajustes->BackColor = System::Drawing::Color::FromArgb(46, 79, 79);
 	}
 	private: System::Void btn_ajustes_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Abrimos el formulario correspondiente
 		this->openPanel(gcnew DnDNPCGenerator::Settings);
+		//Cambiamos el color de los botones
+		this->btn_npc->BackColor = System::Drawing::Color::FromArgb(46, 79, 79);
+		this->btn_list->BackColor = System::Drawing::Color::FromArgb(46, 79, 79);
+		this->btn_ajustes->BackColor = System::Drawing::Color::FromArgb(14, 131, 136);
 	}
 };
 }
