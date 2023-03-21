@@ -1,5 +1,11 @@
 #pragma once
 
+#include "RandomNPC.h";
+#include "NPCList.h";
+#include "Settings.h";
+
+using namespace std;
+
 namespace DnDNPCGenerator {
 
 	using namespace System;
@@ -75,12 +81,11 @@ namespace DnDNPCGenerator {
 			this->btn_list = (gcnew System::Windows::Forms::Button());
 			this->btn_npc = (gcnew System::Windows::Forms::Button());
 			this->panel_Icono = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panelCentral = (gcnew System::Windows::Forms::Panel());
 			this->panel_Titulo = (gcnew System::Windows::Forms::Panel());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panelLateral->SuspendLayout();
 			this->panel_Icono->SuspendLayout();
-			this->panelCentral->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -112,6 +117,7 @@ namespace DnDNPCGenerator {
 			this->btn_ajustes->TabIndex = 3;
 			this->btn_ajustes->Text = L"Settings";
 			this->btn_ajustes->UseVisualStyleBackColor = false;
+			this->btn_ajustes->Click += gcnew System::EventHandler(this, &MainForm::btn_ajustes_Click);
 			this->btn_ajustes->MouseEnter += gcnew System::EventHandler(this, &MainForm::btn_ajustes_MouseEnter);
 			this->btn_ajustes->MouseLeave += gcnew System::EventHandler(this, &MainForm::btn_ajustes_MouseLeave);
 			// 
@@ -129,6 +135,7 @@ namespace DnDNPCGenerator {
 			this->btn_list->TabIndex = 2;
 			this->btn_list->Text = L"List of NPC\'s";
 			this->btn_list->UseVisualStyleBackColor = false;
+			this->btn_list->Click += gcnew System::EventHandler(this, &MainForm::btn_list_Click);
 			this->btn_list->MouseEnter += gcnew System::EventHandler(this, &MainForm::btn_list_MouseEnter);
 			this->btn_list->MouseLeave += gcnew System::EventHandler(this, &MainForm::btn_list_MouseLeave);
 			// 
@@ -146,6 +153,7 @@ namespace DnDNPCGenerator {
 			this->btn_npc->TabIndex = 1;
 			this->btn_npc->Text = L"Random NPC";
 			this->btn_npc->UseVisualStyleBackColor = false;
+			this->btn_npc->Click += gcnew System::EventHandler(this, &MainForm::btn_npc_Click);
 			this->btn_npc->MouseEnter += gcnew System::EventHandler(this, &MainForm::btn_npc_MouseEnter);
 			this->btn_npc->MouseLeave += gcnew System::EventHandler(this, &MainForm::btn_npc_MouseLeave);
 			// 
@@ -160,27 +168,6 @@ namespace DnDNPCGenerator {
 			this->panel_Icono->Size = System::Drawing::Size(200, 200);
 			this->panel_Icono->TabIndex = 0;
 			// 
-			// panelCentral
-			// 
-			this->panelCentral->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
-				static_cast<System::Int32>(static_cast<System::Byte>(222)));
-			this->panelCentral->Controls->Add(this->panel_Titulo);
-			this->panelCentral->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panelCentral->Location = System::Drawing::Point(200, 0);
-			this->panelCentral->Name = L"panelCentral";
-			this->panelCentral->Size = System::Drawing::Size(1044, 661);
-			this->panelCentral->TabIndex = 1;
-			// 
-			// panel_Titulo
-			// 
-			this->panel_Titulo->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(44)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
-				static_cast<System::Int32>(static_cast<System::Byte>(51)));
-			this->panel_Titulo->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel_Titulo->Location = System::Drawing::Point(0, 0);
-			this->panel_Titulo->Name = L"panel_Titulo";
-			this->panel_Titulo->Size = System::Drawing::Size(1044, 30);
-			this->panel_Titulo->TabIndex = 0;
-			// 
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
@@ -193,49 +180,93 @@ namespace DnDNPCGenerator {
 			this->pictureBox1->TabIndex = 0;
 			this->pictureBox1->TabStop = false;
 			// 
+			// panelCentral
+			// 
+			this->panelCentral->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
+				static_cast<System::Int32>(static_cast<System::Byte>(222)));
+			this->panelCentral->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->panelCentral->Location = System::Drawing::Point(200, 0);
+			this->panelCentral->Name = L"panelCentral";
+			this->panelCentral->Size = System::Drawing::Size(1044, 661);
+			this->panelCentral->TabIndex = 1;
+			// 
+			// panel_Titulo
+			// 
+			this->panel_Titulo->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(44)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
+				static_cast<System::Int32>(static_cast<System::Byte>(51)));
+			this->panel_Titulo->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panel_Titulo->Location = System::Drawing::Point(200, 0);
+			this->panel_Titulo->Name = L"panel_Titulo";
+			this->panel_Titulo->Size = System::Drawing::Size(1044, 30);
+			this->panel_Titulo->TabIndex = 0;
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1244, 661);
+			this->Controls->Add(this->panel_Titulo);
 			this->Controls->Add(this->panelCentral);
 			this->Controls->Add(this->panelLateral);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"MainForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"MainForm";
+			this->Text = L"NPC Generator";
 			this->panelLateral->ResumeLayout(false);
 			this->panel_Icono->ResumeLayout(false);
-			this->panelCentral->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
-//Con estas funciones, cambiamos el color del boton cuando pasamos por encima con el raton
-private: System::Void btn_npc_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
-	this->btn_npc->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)), static_cast<System::Int32>(static_cast<System::Byte>(131)),
-		static_cast<System::Int32>(static_cast<System::Byte>(136)));
-}
-private: System::Void btn_npc_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-	this->btn_npc->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
-		static_cast<System::Int32>(static_cast<System::Byte>(79)));
-}
-private: System::Void btn_list_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
-	this->btn_list->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)), static_cast<System::Int32>(static_cast<System::Byte>(131)),
-		static_cast<System::Int32>(static_cast<System::Byte>(136)));
-}
-private: System::Void btn_list_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-	this->btn_list->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
-		static_cast<System::Int32>(static_cast<System::Byte>(79)));
-}
-private: System::Void btn_ajustes_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
-	this->btn_ajustes->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)), static_cast<System::Int32>(static_cast<System::Byte>(131)),
-		static_cast<System::Int32>(static_cast<System::Byte>(136)));
-}
-private: System::Void btn_ajustes_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-	this->btn_ajustes->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
-		static_cast<System::Int32>(static_cast<System::Byte>(79)));
-}
+	//Con estas funciones, cambiamos el color del boton cuando pasamos por encima con el raton
+	private: System::Void btn_npc_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+		this->btn_npc->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)), static_cast<System::Int32>(static_cast<System::Byte>(131)),
+			static_cast<System::Int32>(static_cast<System::Byte>(136)));
+	}
+	private: System::Void btn_npc_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+		this->btn_npc->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
+			static_cast<System::Int32>(static_cast<System::Byte>(79)));
+	}
+	private: System::Void btn_list_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+		this->btn_list->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)), static_cast<System::Int32>(static_cast<System::Byte>(131)),
+			static_cast<System::Int32>(static_cast<System::Byte>(136)));
+	}
+	private: System::Void btn_list_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+		this->btn_list->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
+			static_cast<System::Int32>(static_cast<System::Byte>(79)));
+	}
+	private: System::Void btn_ajustes_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+		this->btn_ajustes->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)), static_cast<System::Int32>(static_cast<System::Byte>(131)),
+			static_cast<System::Int32>(static_cast<System::Byte>(136)));
+	}
+	private: System::Void btn_ajustes_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+		this->btn_ajustes->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
+			static_cast<System::Int32>(static_cast<System::Byte>(79)));
+	}
+
+	//Funciones para cambiar el formulario del panel central
+	   template<class T>
+	   void openPanel(T formSon) {
+		   if (this->panelCentral->Controls->Count > 0) {
+			   this->panelCentral->Controls->RemoveAt(0);
+		   }
+		   formSon->TopLevel = false;
+		   formSon->Dock = DockStyle::Fill;
+		   this->panelCentral->Controls->Add(formSon);
+		   this->panelCentral->Tag = formSon;
+		   formSon->Show();
+	   }
+
+
+	private: System::Void btn_npc_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->openPanel(gcnew DnDNPCGenerator::RandomNPC);
+	}
+	private: System::Void btn_list_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->openPanel(gcnew DnDNPCGenerator::NPCList);
+	}
+	private: System::Void btn_ajustes_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->openPanel(gcnew DnDNPCGenerator::Settings);
+	}
 };
 }
