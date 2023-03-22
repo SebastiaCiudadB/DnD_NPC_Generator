@@ -18,6 +18,7 @@ namespace DnDNPCGenerator {
 		RandomNPC(void)
 		{
 			InitializeComponent();
+
 			//
 			//TODO: agregar código de constructor aquí
 			//
@@ -61,11 +62,14 @@ namespace DnDNPCGenerator {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::Windows::Forms::Button^ btn_generate_npc;
 			this->pnl_correccion = (gcnew System::Windows::Forms::Panel());
 			this->pnl_titulo = (gcnew System::Windows::Forms::Panel());
 			this->lbl_titulo = (gcnew System::Windows::Forms::Label());
 			this->pnl_central = (gcnew System::Windows::Forms::Panel());
+			btn_generate_npc = (gcnew System::Windows::Forms::Button());
 			this->pnl_titulo->SuspendLayout();
+			this->pnl_central->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// pnl_correccion
@@ -105,25 +109,47 @@ namespace DnDNPCGenerator {
 			// 
 			this->pnl_central->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
 				static_cast<System::Int32>(static_cast<System::Byte>(222)));
-			this->pnl_central->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->pnl_central->Controls->Add(btn_generate_npc);
+			this->pnl_central->Font = (gcnew System::Drawing::Font(L"Algerian", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->pnl_central->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
+				static_cast<System::Int32>(static_cast<System::Byte>(222)));
 			this->pnl_central->Location = System::Drawing::Point(0, 90);
 			this->pnl_central->Name = L"pnl_central";
 			this->pnl_central->Size = System::Drawing::Size(1044, 571);
 			this->pnl_central->TabIndex = 2;
+			// 
+			// btn_generate_npc
+			// 
+			btn_generate_npc->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
+				static_cast<System::Int32>(static_cast<System::Byte>(79)));
+			btn_generate_npc->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)),
+				static_cast<System::Int32>(static_cast<System::Byte>(79)), static_cast<System::Int32>(static_cast<System::Byte>(79)));
+			btn_generate_npc->FlatAppearance->BorderSize = 0;
+			btn_generate_npc->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			btn_generate_npc->Font = (gcnew System::Drawing::Font(L"Calibri", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			btn_generate_npc->Location = System::Drawing::Point(441, 483);
+			btn_generate_npc->Name = L"btn_generate_npc";
+			btn_generate_npc->Size = System::Drawing::Size(162, 61);
+			btn_generate_npc->TabIndex = 2;
+			btn_generate_npc->Text = L"Generate NPC";
+			btn_generate_npc->UseVisualStyleBackColor = false;
 			// 
 			// RandomNPC
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1044, 661);
-			this->Controls->Add(this->pnl_central);
 			this->Controls->Add(this->pnl_titulo);
 			this->Controls->Add(this->pnl_correccion);
+			this->Controls->Add(this->pnl_central);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"RandomNPC";
 			this->Text = L"RandomNPC";
 			this->Load += gcnew System::EventHandler(this, &RandomNPC::RandomNPC_Load);
 			this->pnl_titulo->ResumeLayout(false);
+			this->pnl_central->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
