@@ -27,6 +27,7 @@ namespace DnDNPCGenerator {
 
 			this->MinimumSize = System::Drawing::Size(1260, 700);
 			this->MaximumSize = System::Drawing::Size(1260, 700);
+
 			//
 			//TODO: agregar código de constructor aquí
 			//
@@ -52,6 +53,9 @@ namespace DnDNPCGenerator {
 	private: System::Windows::Forms::Button^ btn_list;
 	private: System::Windows::Forms::Button^ btn_npc;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
+
+
+
 
 
 
@@ -113,10 +117,15 @@ namespace DnDNPCGenerator {
 			this->btn_ajustes->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)),
 				static_cast<System::Int32>(static_cast<System::Byte>(131)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
 			this->btn_ajustes->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btn_ajustes->Font = (gcnew System::Drawing::Font(L"Algerian", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btn_ajustes->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
+				static_cast<System::Int32>(static_cast<System::Byte>(222)));
 			this->btn_ajustes->Location = System::Drawing::Point(0, 300);
 			this->btn_ajustes->Name = L"btn_ajustes";
 			this->btn_ajustes->Size = System::Drawing::Size(200, 50);
 			this->btn_ajustes->TabIndex = 3;
+			this->btn_ajustes->TabStop = false;
 			this->btn_ajustes->Text = L"Settings";
 			this->btn_ajustes->UseVisualStyleBackColor = false;
 			this->btn_ajustes->Click += gcnew System::EventHandler(this, &MainForm::btn_ajustes_Click);
@@ -131,10 +140,15 @@ namespace DnDNPCGenerator {
 			this->btn_list->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)),
 				static_cast<System::Int32>(static_cast<System::Byte>(131)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
 			this->btn_list->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btn_list->Font = (gcnew System::Drawing::Font(L"Algerian", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btn_list->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
+				static_cast<System::Int32>(static_cast<System::Byte>(222)));
 			this->btn_list->Location = System::Drawing::Point(0, 250);
 			this->btn_list->Name = L"btn_list";
 			this->btn_list->Size = System::Drawing::Size(200, 50);
 			this->btn_list->TabIndex = 2;
+			this->btn_list->TabStop = false;
 			this->btn_list->Text = L"List of NPC\'s";
 			this->btn_list->UseVisualStyleBackColor = false;
 			this->btn_list->Click += gcnew System::EventHandler(this, &MainForm::btn_list_Click);
@@ -149,10 +163,15 @@ namespace DnDNPCGenerator {
 			this->btn_npc->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)),
 				static_cast<System::Int32>(static_cast<System::Byte>(131)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
 			this->btn_npc->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btn_npc->Font = (gcnew System::Drawing::Font(L"Algerian", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btn_npc->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(228)),
+				static_cast<System::Int32>(static_cast<System::Byte>(222)));
 			this->btn_npc->Location = System::Drawing::Point(0, 200);
 			this->btn_npc->Name = L"btn_npc";
 			this->btn_npc->Size = System::Drawing::Size(200, 50);
 			this->btn_npc->TabIndex = 1;
+			this->btn_npc->TabStop = false;
 			this->btn_npc->Text = L"Random NPC";
 			this->btn_npc->UseVisualStyleBackColor = false;
 			this->btn_npc->Click += gcnew System::EventHandler(this, &MainForm::btn_npc_Click);
