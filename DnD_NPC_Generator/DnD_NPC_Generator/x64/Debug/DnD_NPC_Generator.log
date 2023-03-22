@@ -4,5 +4,10 @@ C:\Users\sebas\Documents\GitHub\DnD_NPC_Generator\DnD_NPC_Generator\DnD_NPC_Gene
 C:\Users\sebas\Documents\GitHub\DnD_NPC_Generator\DnD_NPC_Generator\DnD_NPC_Generator\MainForm.h(4,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
 C:\Users\sebas\Documents\GitHub\DnD_NPC_Generator\DnD_NPC_Generator\DnD_NPC_Generator\MainForm.h(5,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
 C:\Users\sebas\Documents\GitHub\DnD_NPC_Generator\DnD_NPC_Generator\DnD_NPC_Generator\MainForm.cpp(7,1): warning C4829: Parámetros posiblemente incorrectos para la función main. Utilice 'int main(Platform::Array<Platform::String^>^ argv)'
+  NPCList.cpp
+  RandomNPC.cpp
+  Settings.cpp
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Generando código...
   MainForm.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
   DnD_NPC_Generator.vcxproj -> C:\Users\sebas\Documents\GitHub\DnD_NPC_Generator\DnD_NPC_Generator\x64\Debug\DnDNPCGenerator.exe

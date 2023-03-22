@@ -122,6 +122,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CharacterClasses.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="NPCList.cpp" />
     <ClCompile Include="RandomNPC.cpp" />
