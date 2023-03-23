@@ -87,6 +87,18 @@ public:
 		}
 
 	}
+
+	void setAge() {
+		int minAge = 10;
+		int maxAge = 20;
+
+		random_device rd;
+		mt19937 gen(rd());
+
+		uniform_int_distribution<> distrib(minAge, maxAge);
+
+		age = distrib(gen);
+	}
 };
 
 class human : public character {
@@ -97,6 +109,6 @@ public:
 
 		setGender();
 		setSexualOrientation();
+		setAge();
 	}
-
 };
