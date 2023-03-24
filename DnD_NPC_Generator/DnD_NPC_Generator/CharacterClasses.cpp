@@ -90,7 +90,7 @@ public:
 
 	void setAge() {
 		int minAge = 10;
-		int maxAge = 20;
+		int maxAge = 90;
 
 		random_device rd;
 		mt19937 gen(rd());
