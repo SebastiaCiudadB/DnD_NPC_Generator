@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="img\**" />
+    <EmbeddedResource Remove="img\**" />
+    <None Remove="img\**" />
+    <Page Remove="img\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="IMG_FlexaAdelante.png" />
+    <None Remove="IMG_FlexaAtras.png" />
+    <None Remove="IMG_LogoDragon.png" />
+    <None Remove="IMG_TokenHumano.png" />
+    <None Remove="IMG_WindowLogo.png" />
+    <None Remove="Logo_dragon.png" />
+    <None Remove="TokenHumano.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="IMG_FlexaAdelante.png" />
+    <Resource Include="IMG_FlexaAtras.png" />
+    <Resource Include="IMG_LogoDragon.png" />
+    <Resource Include="IMG_TokenHumano.png" />
+    <Resource Include="IMG_WindowLogo.png" />
+  </ItemGroup>
+
+</Project>
