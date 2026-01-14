@@ -4,7 +4,7 @@
 winexe
 C#
 .cs
-C:\Users\Sebastia\Documents\02.Programacion\DnD_NPC_Generator\WpfApp_RandomNPC\obj\Debug\net8.0-windows\
+C:\Users\Sebastia\Documents\02.Programacion\DnD_NPC_Generator\WpfApp_RandomNPC\obj\Release\net8.0-windows\
 WpfApp_RandomNPC
 none
 false
@@ -12,8 +12,8 @@ TRACE;RELEASE;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_
 C:\Users\Sebastia\Documents\02.Programacion\DnD_NPC_Generator\WpfApp_RandomNPC\App.xaml
 2266751386
 
-10-1732409976
-3962040291962
+7-1717199653
+198-1127337667
 MainWindow.xaml;RaceSelectionWindow.xaml;
 
 True
