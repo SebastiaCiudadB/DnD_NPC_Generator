@@ -72,9 +72,9 @@ namespace WpfApp_RandomNPC
 
         protected string tamaño;
         protected string alineamiento;
-        protected List<string> rasgoEspecial = new List<string> { "", "", "", "", "", "", "", "", "", "" };
-        protected List<string> lenguaje = new List<string> { "", "", "", "", "", "", "", "", "", "" };
-        protected List<string> habilidades = new List<string> { "", "", "", "", "", "", "", "", "", "" };
+        protected List<string> rasgoEspecial = new List<string>();
+        protected List<string> lenguaje = new List<string>();
+        protected List<string> habilidades = new List<string>();
 
         //------------------------------------------------------------------------
         //Creamos todas las funciones get() para poder acceder a las variables.
@@ -159,9 +159,6 @@ namespace WpfApp_RandomNPC
 
             tamaño = "";
             alineamiento = "";
-            rasgoEspecial[0] = "";
-            lenguaje[0] = "";
-            habilidades[0] = "";
 
             randomAtributos();
 
@@ -225,7 +222,7 @@ namespace WpfApp_RandomNPC
                     acumulado += item.Value;
                     if (valorRandom < acumulado)        //Si el valor random es mas pequeño, es el indicado
                     {
-                        rasgoEspecial[i] = item.Key;
+                        rasgoEspecial.Add(item.Key);
                         break;
                     }
                 }
@@ -253,11 +250,11 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Aarakocra";
-            lenguaje[2] = "Auran";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Aarakocra");
+            lenguaje.Add("Auran");
 
-            habilidades[0] = "Volar";
+            habilidades.Add("Volar");
 
             //Elegimos la alineacion aleatoriamente porque puede tener varias.
             Random rand = new Random();
@@ -301,19 +298,17 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Celestial";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Celestial");
 
-            habilidades[0] = "Vision Nocturna";
-            habilidades[1] = "Manos curadoras";
-            habilidades[2] = "Resistencia a daño necrotico y radiante";
+            habilidades.Add("Vision Nocturna");
+            habilidades.Add("Manos curadoras");
+            habilidades.Add("Resistencia a daño necrotico y radiante");
 
             //Añadimos un ransgo especial de los Aasmir
             Random rand = new Random();
             var rasgoCelestial = rasgosCelestiales[rand.Next(rasgosCelestiales.Count)];
-
-            int pos = rasgoEspecial[1] == "" ? 1 : 2;
-            rasgoEspecial[pos] = (rasgoCelestial);
+            rasgoEspecial.Add(rasgoCelestial);
 
             //Elegimos la alineacion aleatoriamente porque puede tener varias.
             rand = new Random();
@@ -348,16 +343,15 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Goblin";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Goblin");
 
-            habilidades[0] = "Vision Nocturna";
-            habilidades[1] = "Sigiloso";
-            habilidades[2] = "Fey Ancestry";
+            habilidades.Add("Vision Nocturna");
+            habilidades.Add("Sigiloso");
+            habilidades.Add("Fey Ancestry");
 
             //Añadimos un rasgo especial caracteristico de la raza.
-            int pos = rasgoEspecial[1] == "" ? 1 : 2;
-            rasgoEspecial[pos] = ("Brazos largos");
+            rasgoEspecial.Add("Brazos largos");
 
             //Elegimos la alineacion
 
@@ -397,14 +391,13 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Sylvan";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Sylvan");
 
-            habilidades[0] = "Superviviente";
+            habilidades.Add("Superviviente");
 
             //Añadimos un rasgo especial caracteristico de la raza.
-            int pos = rasgoEspecial[1] == "" ? 1 : 2;
-            rasgoEspecial[pos] = ("Cuerpo de caballo");
+            rasgoEspecial.Add("Cuerpo de caballo");
 
             //Elegimos la alineacion
             Random rand = new Random();
@@ -442,10 +435,10 @@ namespace WpfApp_RandomNPC
 
             tamaño = aux == 0 ? "Pequeño" : "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Otro";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Otro");
 
-            habilidades[0] = "Cambiaformas";
+            habilidades.Add("Cambiaformas");
 
             //Cuando no estan transformados son ebeltos.
             complexion = "Esbelto";
@@ -483,13 +476,13 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Pequeño";
 
-            lenguaje[0] = "Gnomo";
-            lenguaje[1] = "Terranio";
-            lenguaje[2] = "Comun profundo";
+            lenguaje.Add("Gnomo");
+            lenguaje.Add("Terranio");
+            lenguaje.Add("Comun profundo");
 
-            habilidades[0] = "Vision en la Oscuridad";
-            habilidades[1] = "Resistencia Magica Gnoma";
-            habilidades[2] = "Don de los Svirfneblins";
+            habilidades.Add("Vision en la Oscuridad");
+            habilidades.Add("Resistencia Magica Gnoma");
+            habilidades.Add("Don de los Svirfneblins");
 
             colorPiel = "Marron Grisacio";
 
@@ -533,10 +526,10 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Draconico";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Draconico");
 
-            habilidades[0] = "Superviviente";
+            habilidades.Add("Superviviente");
 
             colorCabello = "No tiene";
 
@@ -548,8 +541,7 @@ namespace WpfApp_RandomNPC
             int aux = rand.Next(colorEscamas.Count);    //Usaremos el mismo indice para el color de las escamas y su aliento
 
             colorPiel = colorEscamas[aux];
-            int pos = rasgoEspecial[1] == "" ? 1 : 2;
-            rasgoEspecial[pos] = ("Aliento de " + elementoAliento[aux]);
+            rasgoEspecial.Add("Aliento de " + elementoAliento[aux]);
 
             //Elegimos la alineacion
             rand = new Random();
@@ -585,12 +577,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Enano";
-            lenguaje[1] = "Comun profundo";
+            lenguaje.Add("Enano");
+            lenguaje.Add("Comun profundo");
 
-            habilidades[0] = "Resistencia Duergar";
-            habilidades[1] = "Magia Duergar";
-            habilidades[2] = "Vision en la oscuridad superior";
+            habilidades.Add("Resistencia Duergar");
+            habilidades.Add("Magia Duergar");
+            habilidades.Add("Vision en la oscuridad superior");
 
             colorPiel = "Gris ceniza";
 
@@ -634,11 +626,11 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Enano";
-            lenguaje[1] = "Comun";
+            lenguaje.Add("Enano");
+            lenguaje.Add("Comun");
 
-            habilidades[0] = "Resistencia Enana";
-            habilidades[1] = "Vision en la oscuridad";
+            habilidades.Add("Resistencia Enana");
+            habilidades.Add("Vision en la oscuridad");
 
             //Elegimos la alineacion
             Random rand = new Random();
@@ -672,12 +664,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Elfico";
-            lenguaje[1] = "Comun";
+            lenguaje.Add("Elfico");
+            lenguaje.Add("Comun");
 
-            habilidades[0] = "Linaje Feerico";
-            habilidades[1] = "Vision en la oscuridad";
-            habilidades[2] = "Trance";
+            habilidades.Add("Linaje Feerico");
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Trance");
 
             //Elegimos la alineacion
             alineamiento = Caracter[2] + " " + Alineacion[0];
@@ -709,14 +701,14 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Elfico";
-            lenguaje[1] = "Comun";
-            lenguaje[2] = "Sylvan";
+            lenguaje.Add("Elfico");
+            lenguaje.Add("Comun");
+            lenguaje.Add("Sylvan");
 
-            habilidades[0] = "Linaje Feerico";
-            habilidades[1] = "Vision en la oscuridad";
-            habilidades[2] = "Trance";
-            habilidades[3] = "Fey Step";
+            habilidades.Add("Linaje Feerico");
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Trance");
+            habilidades.Add("Fey Step");
 
             //Caracteristicas especificas de Eladins
             List<string> estaciones = new List<string> { "Invierno", "Primavera", "Verano", "Otoño" };
@@ -783,12 +775,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Pequeño";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Sylvan";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Sylvan");
 
-            habilidades[0] = "Linaje Feerico";
-            habilidades[1] = "Magia de Hada";
-            habilidades[2] = "Vuela";
+            habilidades.Add("Linaje Feerico");
+            habilidades.Add("Magia de Hada");
+            habilidades.Add("Vuela");
 
             //Caracteristicas especificas de Hadas
             List<string> caracteristicasHadas = new List<string>
@@ -808,8 +800,7 @@ namespace WpfApp_RandomNPC
             string caracteristicaHada = caracteristicasHadas[posCaracHada];
 
             //Añadimos la nueva caracteristica a la lista de rasgos especiales
-            int pos = rasgoEspecial[1] == "" ? 1 : 2;
-            rasgoEspecial[pos] = (caracteristicaHada);
+            rasgoEspecial.Add(caracteristicaHada);
 
             //Elegimos la alineacion
             int numAlineacion = rand.Next(0, 3);
@@ -842,12 +833,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Gigante";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Gigante");
 
-            habilidades[0] = "Paso Oculto";
-            habilidades[1] = "Magia de Firbolg";
-            habilidades[2] = "Constitucion poderosa";
+            habilidades.Add("Paso Oculto");
+            habilidades.Add("Magia de Firbolg");
+            habilidades.Add("Constitucion poderosa");
 
             //Elegimos la alineacion
             alineamiento = Caracter[2] + " " + Alineacion[0];
@@ -879,12 +870,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Primordial";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Primordial");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Resistencia al fuego";
-            habilidades[2] = "Constitucion poderosa";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Resistencia al fuego");
+            habilidades.Add("Constitucion poderosa");
 
             //Rasgos fisicos caracteristicos
             List<string> pielGenasiFu = new List<string> { "Rojico", "Anaranjado", "Bronce incandescente", "Carbon Oscuro" };
@@ -932,12 +923,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Primordial";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Primordial");
 
-            habilidades[0] = "Respiracion indefinida";
-            habilidades[1] = "Resistencia al rayo";
-            habilidades[2] = "Mezclarse con el viento";
+            habilidades.Add("Respiracion indefinida");
+            habilidades.Add("Resistencia al rayo");
+            habilidades.Add("Mezclarse con el viento");
 
             //Rasgos fisicos caracteristicos
             List<string> pielGenasiAi = new List<string> { "Azul Claro", "Gris Palido", "Blanco Nacarado" };
@@ -986,12 +977,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Primordial";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Primordial");
 
-            habilidades[0] = "Caminar en tierra";
-            habilidades[1] = "Pasar sin rastro";
-            habilidades[2] = "Fusion con piedra";
+            habilidades.Add("Caminar en tierra");
+            habilidades.Add("Pasar sin rastro");
+            habilidades.Add("Fusion con piedra");
 
             //Rasgos fisicos caracteristicos
             List<string> pielGenasiAi = new List<string> { "Tono Marron", "Ocre", "Arena", "Arcilla", "Gris Piedra" };
@@ -1039,13 +1030,13 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Primordial";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Primordial");
 
-            habilidades[0] = "Anfibio";
-            habilidades[1] = "Nado Rapido";
-            habilidades[2] = "Resistencia al Acido";
-            habilidades[3] = "Llamada a la Ola";
+            habilidades.Add("Anfibio");
+            habilidades.Add("Nado Rapido");
+            habilidades.Add("Resistencia al Acido");
+            habilidades.Add("Llamada a la Ola");
 
             //Rasgos fisicos caracteristicos
             List<string> pielGenasiAi = new List<string> { "Azul Profundo", "Turquesa", "Verde Marino", "Gris Oscuro" };
@@ -1093,12 +1084,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Gith";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Gith");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Githyanki Psionics";
-            habilidades[2] = "Conocimiento Astral";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Githyanki Psionics");
+            habilidades.Add("Conocimiento Astral");
 
             //Rasgos fisicos caracteristicos
             List<string> pielGith = new List<string> { "Amarillo Palido", "Verdoso Apagado", "Oliva", "Mostaza" };
@@ -1145,12 +1136,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Gith";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Gith");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Githyanki Psionics";
-            habilidades[2] = "Conocimiento Astral";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Githyanki Psionics");
+            habilidades.Add("Conocimiento Astral");
 
             //Rasgos fisicos caracteristicos
             List<string> pielGith = new List<string> { "Gris Palido", "Amarillo Apagado", "Arena", "Beige" };
@@ -1197,11 +1188,11 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Pequeño";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Gnómico";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Gnómico");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Cunning Gnomo";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Cunning Gnomo");
 
             //Elegimos la alineacion
             alineamiento = Caracter[1] + " " + Alineacion[0];
@@ -1233,12 +1224,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Pequeño";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Goblin";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Goblin");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Nimble Escape";
-            habilidades[2] = "Furia de lo Pequeño";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Nimble Escape");
+            habilidades.Add("Furia de lo Pequeño");
 
             //Rasgos fisicos caracteristicos
             List<string> pielGoblin = new List<string> { "Verde Oliva Claro", "Verde Oliva Oscuro", "Verde Oscuro", "Amarillo Verdoso" };
@@ -1285,12 +1276,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Gigante";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Gigante");
 
-            habilidades[0] = "Resistencia de Piedra";
-            habilidades[1] = "Constitucion Poderosa";
-            habilidades[2] = "Nacido de la montaña";
+            habilidades.Add("Resistencia de Piedra");
+            habilidades.Add("Constitucion Poderosa");
+            habilidades.Add("Nacido de la montaña");
 
             //Rasgos fisicos caracteristicos
             List<string> pielGoblin = new List<string> { "Gris Claro", "Gris Oscuro", "Azulada", "Blanquinosa" };
@@ -1330,13 +1321,13 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Pequeño";
 
-            lenguaje[0] = "Grung";
+            lenguaje.Add("Grung");
 
-            habilidades[0] = "Anfibio";
-            habilidades[1] = "Inmunidad al veneno";
-            habilidades[2] = "Piel venenosa";
-            habilidades[3] = "Dependencia del agua";
-            habilidades[4] = "Gran salto de pie";
+            habilidades.Add("Anfibio");
+            habilidades.Add("Inmunidad al veneno");
+            habilidades.Add("Piel venenosa");
+            habilidades.Add("Dependencia del agua");
+            habilidades.Add("Gran salto de pie");
 
             //Rasgos fisicos caracteristicos
             List<string> pielGrung = new List<string> { "Verde", "Azul", "Purpura", "Rojo", "Naranja", "Dorado" };
@@ -1348,8 +1339,7 @@ namespace WpfApp_RandomNPC
             colorPiel = pielGrung[aux];
 
             //Añadimos la nueva caracteristica a la lista de rasgos especiales
-            int pos = rasgoEspecial[1] == "" ? 1 : 2;
-            rasgoEspecial[pos] = (estatusGrug[aux]);
+            rasgoEspecial.Add(estatusGrug[aux]);
 
             aux = rand.Next(ojosGrung.Count);
             colorOjos = ojosGrung[aux];
@@ -1388,13 +1378,13 @@ namespace WpfApp_RandomNPC
             Random rand = new Random();
             tamaño = rand.Next(0, 2) == 0 ? "Mediano" : "Pequeño"; //Elegimos un tamaño entre los dos
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Silvano";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Silvano");
 
-            habilidades[0] = "Hare-Trigger";
-            habilidades[1] = "Leporine Senses";
-            habilidades[2] = "Lucky Footwork";
-            habilidades[3] = "Rabbit Hop";
+            habilidades.Add("Hare-Trigger");
+            habilidades.Add("Leporine Senses");
+            habilidades.Add("Lucky Footwork");
+            habilidades.Add("Rabbit Hop");
 
             //Rasgos fisicos caracteristicos
             List<string> peloGrug = new List<string> { "Blanco", "Gris", "Marron", "Beige", "Negro", "Moteado" };
@@ -1432,11 +1422,11 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Elfico";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Elfico");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Ancestro Feerico";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Ancestro Feerico");
 
             //Elegimos la alineacion
             alineamiento = Caracter[1] + " " + Alineacion[1];
@@ -1468,12 +1458,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Pequeño";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Halfling";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Halfling");
 
-            habilidades[0] = "Suertudo";
-            habilidades[1] = "Valiente";
-            habilidades[2] = "Agilidad Halfling";
+            habilidades.Add("Suertudo");
+            habilidades.Add("Valiente");
+            habilidades.Add("Agilidad Halfling");
 
             //Elegimos la alineacion
             Random rand = new Random();
@@ -1507,13 +1497,13 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Orco";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Orco");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Amenazante";
-            habilidades[2] = "Resistencia Implacable";
-            habilidades[3] = "Ataques Salvajes";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Amenazante");
+            habilidades.Add("Resistencia Implacable");
+            habilidades.Add("Ataques Salvajes");
 
             //Rasgos fisicos caracteristicos
             List<string> pielHOrc = new List<string> { "Verde Oliva", "Verdosa", "Verde Grisacio", "Marron Verdoso" };
@@ -1560,12 +1550,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Goblin";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Goblin");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Regalo Feerico";
-            habilidades[2] = "Furia de Muchos";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Regalo Feerico");
+            habilidades.Add("Furia de Muchos");
 
             //Rasgos fisicos caracteristicos
             List<string> pielHobgoblin = new List<string> { "Rojo Oscuro", "Cobrizo", "Gris Ladrillo", "Marron Rojizo" };
@@ -1612,7 +1602,7 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
+            lenguaje.Add("Comun");
 
             //Elegimos la alineacion
             Random rand = new Random();
@@ -1647,13 +1637,13 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Auran";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Auran");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Experto en Falsificacion";
-            habilidades[2] = "Memoria de Kenku";
-            habilidades[3] = "Imitacion";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Experto en Falsificacion");
+            habilidades.Add("Memoria de Kenku");
+            habilidades.Add("Imitacion");
 
             //Rasgos fisicos caracteristicos
             List<string> ojosKenku = new List<string> { "Negro", "Ambar Oscuro", "Rojizos" };
@@ -1696,12 +1686,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Pequeño";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Draconico";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Draconico");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Lloro Draconico";
-            habilidades[2] = "Legado Kobold";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Lloro Draconico");
+            habilidades.Add("Legado Kobold");
 
             //Rasgos fisicos caracteristicos
             List<string> ojosKobold = new List<string> { "Amarillos", "Naranjas", "Rojos", "Negros" };
@@ -1746,12 +1736,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Draconico";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Draconico");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Nimble Escape";
-            habilidades[2] = "Furia de lo Pequeño";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Nimble Escape");
+            habilidades.Add("Furia de lo Pequeño");
 
             //Rasgos fisicos caracteristicos
             List<string> ojosLizardfolk = new List<string> { "Amarillos", "Verdes", "Ambar", "Marron Oscuros" };
@@ -1796,13 +1786,13 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Aquan";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Aquan");
 
-            habilidades[0] = "Amfibio";
-            habilidades[1] = "Armadura Natural";
-            habilidades[2] = "Dependencia del Agua";
-            habilidades[3] = "Voluntad del leviatan";
+            habilidades.Add("Amfibio");
+            habilidades.Add("Armadura Natural");
+            habilidades.Add("Dependencia del Agua");
+            habilidades.Add("Voluntad del leviatan");
 
             //Rasgos fisicos caracteristicos
             List<string> ojosLocathah = new List<string> { "Negros", "Azul Oscuro", "Plateados", "Verdes" };
@@ -1847,12 +1837,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Minotauro";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Minotauro");
 
-            habilidades[0] = "Cuernos Martillo";
-            habilidades[1] = "Goring Rush";
-            habilidades[2] = "Recuerdo Laberintico";
+            habilidades.Add("Cuernos Martillo");
+            habilidades.Add("Goring Rush");
+            habilidades.Add("Recuerdo Laberintico");
 
             //Rasgos fisicos caracteristicos
             List<string> ojosMinotaur = new List<string> { "Negros", "Marron Oscuro", "Ambar", "Rojo Oscuros" };
@@ -1897,13 +1887,13 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Orco";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Orco");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Agresivo";
-            habilidades[2] = "Constitucion poderosa";
-            habilidades[3] = "Chute de adrenalina";   
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Agresivo");
+            habilidades.Add("Constitucion poderosa");
+            habilidades.Add("Chute de adrenalina");   
 
             //Rasgos fisicos caracteristicos
             List<string> ojosOrc = new List<string> { "Rojos", "Marron Oscuro", "Ambar", "Amarillos" };
@@ -1950,11 +1940,11 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
+            lenguaje.Add("Comun");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Vuela";
-            habilidades[2] = "Plumaje silencioso";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Vuela");
+            habilidades.Add("Plumaje silencioso");
 
             //Rasgos fisicos caracteristicos
             List<string> ojosOwil = new List<string> { "Dorados", "Naranjas", "Ambar", "Marron Oscuros", "Negros" };
@@ -1997,12 +1987,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Silvano";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Silvano");
 
-            habilidades[0] = "Antepasado Feerico";
-            habilidades[1] = "Resistencia Magica";
-            habilidades[2] = "Saltos Alegres";
+            habilidades.Add("Antepasado Feerico");
+            habilidades.Add("Resistencia Magica");
+            habilidades.Add("Saltos Alegres");
 
             //Rasgos fisicos caracteristicos
             List<string> ojosSatyr = new List<string> { "Verdes", "Marron", "Ambar", "Dorados" };
@@ -2041,13 +2031,13 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Elfico";
-            lenguaje[1] = "Aquatico";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Elfico");
+            lenguaje.Add("Aquatico");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Hijo del Mar";
-            habilidades[2] = "Amigo del Mar";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Hijo del Mar");
+            habilidades.Add("Amigo del Mar");
 
             //Rasgos fisicos caracteristicos
             List<string> ojosSeaElf = new List<string> { "Azul Profundo", "Verde Oceano", "Plateado", "Negro Brillante" };
@@ -2094,12 +2084,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Elfico";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Elfico");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Bendicion de la Reina Cuervo";
-            habilidades[2] = "Resistencia daño Necrotico";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Bendicion de la Reina Cuervo");
+            habilidades.Add("Resistencia daño Necrotico");
 
             //Rasgos fisicos caracteristicos
             List<string> ojosShadar_Kai = new List<string> { "Grises", "Plateados", "Violetas Oscuros", "Negros" };
@@ -2140,16 +2130,16 @@ namespace WpfApp_RandomNPC
             randomAtributos();      //Generamos los atributos aleatorios
 
             //Ahora definimos los atributos que no son aleatorios.
-            raza = "Goblin";
+            raza = "Shifter";
 
             criatura = "Humanoide";
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
+            lenguaje.Add("Comun");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Cambiar Forma";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Cambiar Forma");
 
             //Rasgos fisicos caracteristicos
             List<string> ojosOrc = new List<string> { "Verde Intenso", "Marron Oscuro", "Ambar", "Dorados" };
@@ -2188,12 +2178,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Felino";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Felino");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Agilidad Felina";
-            habilidades[2] = "Garras de Gato";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Agilidad Felina");
+            habilidades.Add("Garras de Gato");
 
             //Rasgos fisicos caracteristicos
             List<string> ojosTabaxi = new List<string> { "Verdes", "Dorados", "Ambar", "Amarillos", "Azules" };
@@ -2239,12 +2229,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Infernal";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Infernal");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Resistencia Infernal";
-            habilidades[2] = "Legado Infernal";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Resistencia Infernal");
+            habilidades.Add("Legado Infernal");
 
             //Rasgos fisicos caracteristicos
             List<string> ojosTiefling = new List<string> { "Dorados", "Rojos", "Negros", "Amarillos" };
@@ -2291,12 +2281,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Aquatico";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Aquatico");
 
-            habilidades[0] = "Armadura Natural";
-            habilidades[1] = "Defensa de Caparazon";
-            habilidades[2] = "Aguantar Respiracion";
+            habilidades.Add("Armadura Natural");
+            habilidades.Add("Defensa de Caparazon");
+            habilidades.Add("Aguantar Respiracion");
 
             //Rasgos fisicos caracteristicos
             List<string> ojosTortle = new List<string> { "Negros", "Marron Oscuro", "Ambar", "Verde Apagados" };
@@ -2341,13 +2331,13 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Primordial";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Primordial");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Anfibio";
-            habilidades[2] = "Control Aire y Agua";
-            habilidades[3] = "Resistencia al Frio";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Anfibio");
+            habilidades.Add("Control Aire y Agua");
+            habilidades.Add("Resistencia al Frio");
 
             //Rasgos fisicos caracteristicos
             List<string> ojosTriton = new List<string> { "Azul Intenso", "Verde Oceano", "Dorado Palido", "Plateado" };
@@ -2395,12 +2385,12 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Goblin";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Goblin");
 
-            habilidades[0] = "Telepatia Limitada";
-            habilidades[1] = "Ventaja Telepatica";
-            habilidades[2] = "Curacion de Sangre Negra";
+            habilidades.Add("Telepatia Limitada");
+            habilidades.Add("Ventaja Telepatica");
+            habilidades.Add("Curacion de Sangre Negra");
 
             //Rasgos fisicos caracteristicos
             List<string> ojosVerdan = new List<string> { "Negros", "Violeta Oscuro", "Verde" };
@@ -2447,13 +2437,13 @@ namespace WpfApp_RandomNPC
 
             tamaño = "Mediano";
 
-            lenguaje[0] = "Comun";
-            lenguaje[1] = "Abisal";
-            lenguaje[2] = "Draconico";
+            lenguaje.Add("Comun");
+            lenguaje.Add("Abisal");
+            lenguaje.Add("Draconico");
 
-            habilidades[0] = "Vision en la oscuridad";
-            habilidades[1] = "Inmunidad al veneno";
-            habilidades[2] = "Resistencia Magica";
+            habilidades.Add("Vision en la oscuridad");
+            habilidades.Add("Inmunidad al veneno");
+            habilidades.Add("Resistencia Magica");
 
             //Rasgos fisicos caracteristicos
             List<string> ojosOrc = new List<string> { "Dorados", "Negros", "Verdes Brillantes", "Amarillos" };

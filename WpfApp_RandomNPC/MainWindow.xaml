@@ -10,12 +10,14 @@
         <!--===========================================-->
         <!--Estructura de la ventana-->
         <!--===========================================-->
+        <Image HorizontalAlignment="Left" Height="121" Margin="27,256,0,0" VerticalAlignment="Top" Width="140" Source="/IMG_Ornamento.png"/>
+
+
+        <!--===========================================-->
         <Rectangle x:Name="RectHeader" Height="100" VerticalAlignment="Top" Fill="#FF195E63"/>
         <Image x:Name="ImgLogo" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/IMG_LogoDragon.png" Margin="10,10,0,0" SnapsToDevicePixels="True"/>
         <Rectangle x:Name="RectDisplay" HorizontalAlignment="Left" Margin="227,100,0,0" Width="973" Fill="#FF3E838C" Stroke="Black" StrokeThickness="2"/>
 
-        <!--===========================================-->
-        <!--Labels de informacion general-->
         <!--===========================================-->
         <TextBlock HorizontalAlignment="Left" Height="30" Margin="10,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"><Run Language="es-es" Text="OPCIONES"
             FontFamily="Segoe UI"
@@ -29,8 +31,6 @@
             FontSize="64"
             Foreground="LightGray"/></TextBlock>
 
-        <!--===========================================-->
-        <!--Seleccionar quantos NPCs quieres-->
         <!--===========================================-->
 
         <TextBlock HorizontalAlignment="Left" Height="22" Margin="10,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194"><Run Language="es-es" Text="Cuantos NPCs quieres?"
@@ -56,7 +56,6 @@
         <Label Content="1" HorizontalAlignment="Left" Height="31" Margin="17,168,0,0" VerticalAlignment="Top" Width="20"/>
         <Label Content="nº" HorizontalAlignment="Left" Height="31" Margin="52,168,0,0" VerticalAlignment="Top" Width="29"/>
 
-        <!--Lista para seleccionar el numero de NPCs que deseas-->
         <!--Solo esta activa si seleccionas la Checkbox de varios NPCs-->
         <ComboBox x:Name="LstSomeNPC" HorizontalAlignment="Left" Height="20" Margin="80,195,0,0" VerticalAlignment="Top" Width="75">
             <ComboBoxItem Content="2"/>
@@ -71,8 +70,6 @@
         </ComboBox>
 
         <!--===========================================-->
-        <!--Seleccionar que razas quieres para los NPCs-->
-        <!--===========================================-->
 
         <Label Content="Selecciona las razas que quieres" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top" Width="217"
             FontFamily="Segoe UI"
@@ -84,10 +81,6 @@
         <Button x:Name="BtGenerarNpc" Content="Generar NPCs" HorizontalAlignment="Left" Margin="10,340,0,0" VerticalAlignment="Top" Width="165" 
                 Click="BtGenerarNpc_Click" Height="50"/>
         <Button Content="Guardar documento" HorizontalAlignment="Left" Margin="10,398,0,0" VerticalAlignment="Top" Width="165" Click="GuardarInformacionNPC"/>
-
-        <!--===========================================-->
-        <!--Mostrar informacion de los NPCs-->
-        <!--===========================================-->
 
         <!--Imagen de la raza-->
         <Image x:Name="ImgRaza" HorizontalAlignment="Left" Height="94" Margin="247,114,0,0" VerticalAlignment="Top" Width="96" Source="/IMG_TokenHumano.png"/>
@@ -138,8 +131,6 @@
         <Label x:Name="LabelRasgoEsp" Content="" HorizontalAlignment="Left" Margin="880,370,0,0" VerticalAlignment="Top" Height="84" Width="293" BorderBrush="Black" FontSize="16" BorderThickness="1,1,1,1" ClipToBounds="True" Background="#FF8EBDB6"/>
 
         <!--===========================================-->
-        <!--Flexas para cambiar de NPC-->
-        <!--===========================================-->
         <Image x:Name="FlexaAdelante" HorizontalAlignment="Left" Height="42" Margin="714,590,0,0" VerticalAlignment="Top" Width="100" 
                Source="/IMG_FlexaAdelante.png" 
                Opacity="0.2"
@@ -148,7 +139,6 @@
                Source="/IMG_FlexaAtras.png" 
                Opacity="0.2"
                MouseLeftButtonUp="PreviousNPC"/>
-        <Image HorizontalAlignment="Left" Height="121" Margin="27,256,0,0" VerticalAlignment="Top" Width="140" Source="/IMG_Ornamento.png"/>
 
 
     </Grid>
