@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Sebastia\\Documents\\02.Programacion\\DnD_NPC_Generator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{94AED654-25EC-4F39-AD7C-47F8297C4CC8}|WpfApp_RandomNPC\\WpfApp_RandomNPC.csproj|c:\\users\\sebastia\\documents\\02.programacion\\dnd_npc_generator\\wpfapp_randomnpc\\clasesrazas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94AED654-25EC-4F39-AD7C-47F8297C4CC8}|WpfApp_RandomNPC\\WpfApp_RandomNPC.csproj|solutionrelative:wpfapp_randomnpc\\clasesrazas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94AED654-25EC-4F39-AD7C-47F8297C4CC8}|WpfApp_RandomNPC\\WpfApp_RandomNPC.csproj|c:\\users\\sebastia\\documents\\02.programacion\\dnd_npc_generator\\wpfapp_randomnpc\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94AED654-25EC-4F39-AD7C-47F8297C4CC8}|WpfApp_RandomNPC\\WpfApp_RandomNPC.csproj|solutionrelative:wpfapp_randomnpc\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94AED654-25EC-4F39-AD7C-47F8297C4CC8}|WpfApp_RandomNPC\\WpfApp_RandomNPC.csproj|c:\\users\\sebastia\\documents\\02.programacion\\dnd_npc_generator\\wpfapp_randomnpc\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{94AED654-25EC-4F39-AD7C-47F8297C4CC8}|WpfApp_RandomNPC\\WpfApp_RandomNPC.csproj|solutionrelative:wpfapp_randomnpc\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94AED654-25EC-4F39-AD7C-47F8297C4CC8}|WpfApp_RandomNPC\\WpfApp_RandomNPC.csproj|c:\\users\\sebastia\\documents\\02.programacion\\dnd_npc_generator\\wpfapp_randomnpc\\descargarnpcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94AED654-25EC-4F39-AD7C-47F8297C4CC8}|WpfApp_RandomNPC\\WpfApp_RandomNPC.csproj|solutionrelative:wpfapp_randomnpc\\descargarnpcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 137,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DescargarNPCs.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastia\\Documents\\02.Programacion\\DnD_NPC_Generator\\WpfApp_RandomNPC\\DescargarNPCs.cs",
+              "RelativeDocumentMoniker": "WpfApp_RandomNPC\\DescargarNPCs.cs",
+              "ToolTip": "C:\\Users\\Sebastia\\Documents\\02.Programacion\\DnD_NPC_Generator\\WpfApp_RandomNPC\\DescargarNPCs.cs",
+              "RelativeToolTip": "WpfApp_RandomNPC\\DescargarNPCs.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAkwBMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T08:03:54.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClasesRazas.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastia\\Documents\\02.Programacion\\DnD_NPC_Generator\\WpfApp_RandomNPC\\ClasesRazas.cs",
+              "RelativeDocumentMoniker": "WpfApp_RandomNPC\\ClasesRazas.cs",
+              "ToolTip": "C:\\Users\\Sebastia\\Documents\\02.Programacion\\DnD_NPC_Generator\\WpfApp_RandomNPC\\ClasesRazas.cs",
+              "RelativeToolTip": "WpfApp_RandomNPC\\ClasesRazas.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T07:36:57.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastia\\Documents\\02.Programacion\\DnD_NPC_Generator\\WpfApp_RandomNPC\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp_RandomNPC\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Sebastia\\Documents\\02.Programacion\\DnD_NPC_Generator\\WpfApp_RandomNPC\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp_RandomNPC\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOYBAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T07:36:53.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Sebastia\\Documents\\02.Programacion\\DnD_NPC_Generator\\WpfApp_RandomNPC\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp_RandomNPC\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Sebastia\\Documents\\02.Programacion\\DnD_NPC_Generator\\WpfApp_RandomNPC\\MainWindow.xaml",
+              "RelativeToolTip": "WpfApp_RandomNPC\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-15T07:35:21.287Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

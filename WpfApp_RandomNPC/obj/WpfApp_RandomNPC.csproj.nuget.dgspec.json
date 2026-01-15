@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sebastia\\Documents\\02.Programacion\\WpfApp_RandomNPC\\WpfApp_RandomNPC\\WpfApp_RandomNPC.csproj": {}
+    "C:\\Users\\Sebastia\\Documents\\02.Programacion\\DnD_NPC_Generator\\WpfApp_RandomNPC\\WpfApp_RandomNPC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sebastia\\Documents\\02.Programacion\\WpfApp_RandomNPC\\WpfApp_RandomNPC\\WpfApp_RandomNPC.csproj": {
+    "C:\\Users\\Sebastia\\Documents\\02.Programacion\\DnD_NPC_Generator\\WpfApp_RandomNPC\\WpfApp_RandomNPC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sebastia\\Documents\\02.Programacion\\WpfApp_RandomNPC\\WpfApp_RandomNPC\\WpfApp_RandomNPC.csproj",
+        "projectUniqueName": "C:\\Users\\Sebastia\\Documents\\02.Programacion\\DnD_NPC_Generator\\WpfApp_RandomNPC\\WpfApp_RandomNPC.csproj",
         "projectName": "WpfApp_RandomNPC",
-        "projectPath": "C:\\Users\\Sebastia\\Documents\\02.Programacion\\WpfApp_RandomNPC\\WpfApp_RandomNPC\\WpfApp_RandomNPC.csproj",
+        "projectPath": "C:\\Users\\Sebastia\\Documents\\02.Programacion\\DnD_NPC_Generator\\WpfApp_RandomNPC\\WpfApp_RandomNPC.csproj",
         "packagesPath": "C:\\Users\\Sebastia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sebastia\\Documents\\02.Programacion\\WpfApp_RandomNPC\\WpfApp_RandomNPC\\obj\\",
+        "outputPath": "C:\\Users\\Sebastia\\Documents\\02.Programacion\\DnD_NPC_Generator\\WpfApp_RandomNPC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sebastia\\AppData\\Roaming\\NuGet\\NuGet.Config",

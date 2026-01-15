@@ -99,6 +99,9 @@ namespace WpfApp_RandomNPC
         //Una variable para poder saber en que posicion nos encontramos de la lista de NPCs
         int posicionListaNpcs = 0;
 
+        //VAriable para saber si ya se ha creado un NPC.
+        int npcCreado = 0;
+
         //======================================================================================
         // FUNCIONES NPCS
         //======================================================================================
@@ -439,6 +442,8 @@ namespace WpfApp_RandomNPC
             listaNpcInfo.Clear();   //Vaciamos la lista para poder hacer el proceso limpiamente
             posicionListaNpcs = 0;  //Reiniciamos la posicion de la lista cada vez que generamos nuveos NPCs
 
+            npcCreado = 1;  //Marcamos que ya existe como minimo 1 NPC
+
             //Ponemos las imagenes de las flexas en sus estados neutros.
             FlexaAdelante.Opacity = 0.2;
             FlexaAdelante.Cursor = Cursors.Arrow;
@@ -471,5 +476,16 @@ namespace WpfApp_RandomNPC
             }            
         }
 
+        private void GuardarInformacionNPC(object sender, RoutedEventArgs e)
+        {
+            //Si se ha creado como minimo 1 NPC, entramos en el IF.
+            if (npcCreado == 1) 
+            {
+                DescargarNPCs _descargarNPCs = new DescargarNPCs(); //Creamos una instancia de la classe que tiene las funciones.
+                //Llamamos a la funcion que guarda los datos creados en un documento .txt
+                //Como atributo ponemos otra funcion que genera el texto que queremos en el documento.
+                _descargarNPCs.guardarInfoEnDocumento(_descargarNPCs.CrearTexto(listaNpcInfo));
+            }
+        }
     }
 }

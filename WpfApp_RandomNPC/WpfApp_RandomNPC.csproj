@@ -19,6 +19,7 @@
     <None Remove="IMG_FlexaAdelante.png" />
     <None Remove="IMG_FlexaAtras.png" />
     <None Remove="IMG_LogoDragon.png" />
+    <None Remove="IMG_Ornamento.png" />
     <None Remove="IMG_TokenHumano.png" />
     <None Remove="IMG_WindowLogo.png" />
     <None Remove="Logo_dragon.png" />
@@ -29,6 +30,7 @@
     <Resource Include="IMG_FlexaAdelante.png" />
     <Resource Include="IMG_FlexaAtras.png" />
     <Resource Include="IMG_LogoDragon.png" />
+    <Resource Include="IMG_Ornamento.png" />
     <Resource Include="IMG_TokenHumano.png" />
     <Resource Include="IMG_WindowLogo.png" />
   </ItemGroup>

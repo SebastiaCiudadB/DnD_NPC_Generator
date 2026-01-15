@@ -83,7 +83,7 @@
                 Click="BtSeleccionarRazas" BorderThickness="1,1,1,1" ClipToBounds="True"/>
         <Button x:Name="BtGenerarNpc" Content="Generar NPCs" HorizontalAlignment="Left" Margin="10,340,0,0" VerticalAlignment="Top" Width="165" 
                 Click="BtGenerarNpc_Click" Height="50"/>
-        <Button Content="Guardar documento" HorizontalAlignment="Left" Margin="10,398,0,0" VerticalAlignment="Top" Width="165"/>
+        <Button Content="Guardar documento" HorizontalAlignment="Left" Margin="10,398,0,0" VerticalAlignment="Top" Width="165" Click="GuardarInformacionNPC"/>
 
         <!--===========================================-->
         <!--Mostrar informacion de los NPCs-->
@@ -148,6 +148,7 @@
                Source="/IMG_FlexaAtras.png" 
                Opacity="0.2"
                MouseLeftButtonUp="PreviousNPC"/>
+        <Image HorizontalAlignment="Left" Height="121" Margin="27,256,0,0" VerticalAlignment="Top" Width="140" Source="/IMG_Ornamento.png"/>
 
 
     </Grid>
