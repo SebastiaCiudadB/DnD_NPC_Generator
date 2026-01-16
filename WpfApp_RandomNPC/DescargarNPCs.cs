@@ -15,14 +15,15 @@ namespace WpfApp_RandomNPC
         {
             //Creamos la variable que va a contener todo el texto que queremos escribir.
             string textoFinal = "";
+            int position = 1;
             //Recorremos cada uno de los elementos NPC para ir cojiendo toda la informacion.
             foreach (NPC npc in npcInfo)
             {
-                string lenguajes = "";
-                string rasgosEsp = "";
-
                 textoFinal = textoFinal +
                     //Inicio de tabla
+                    "======================================================\n" +
+                    "Personaje " + position + "\n" +
+                    "======================================================\n\n\n" +
                     "<table><tbody>\n" +
                     "\t<tr>\n" +
                     //Primera linea
@@ -76,6 +77,8 @@ namespace WpfApp_RandomNPC
                     "\t\t<td colspan=\"7\">" + string.Join(", ", npc.getRasgoEspecial()) + "</td>\n" +
                     "\t</tr>\n" +
                     "</tbody></table>\n\n\n";
+
+                position++;
             }
             return textoFinal;
         }

@@ -167,6 +167,7 @@ namespace WpfApp_RandomNPC
         protected void randomAtributos()
         {
             Random rand = new Random();
+            rasgoEspecial.Clear();
 
             // Asigna la edad y la altura de manera aleatoria.
             edad = rand.Next(rangoEdad[0], rangoEdad[1]);
